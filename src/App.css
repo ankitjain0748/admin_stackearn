@@ -1,38 +1,1383 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.stickybar {
+  position: sticky;
+  top: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.data-limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Adjust this number to set how many lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.blog-limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Adjust this number to set how many lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.spcace-data {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.custom-hover-btn {
+  background-color: #0d6efd;
+  /* Primary blue */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.custom-hover-btn:hover {
+  background-color: #dc3545;
+  /* Danger red */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.blog-title-limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* Adjust this number to set how many lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.modal.show {
+  z-index: 3;
+  /* Ensure it stays above other elements */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dim the background */
+}
+
+.close,
+.btn-close-lg {
+  font-size: 1.5rem;
+  /* Increase the close icon size */
+  color: #000;
+  /* Set the color of the icon */
+  background: none;
+  /* Remove default button styles */
+  border: none;
+  cursor: pointer;
+}
+
+.close:hover,
+.btn-close-lg:hover {
+  color: #ff0000;
+  /* Add hover effect */
+}
+
+.modal-dialog:hover .btn-close {
+  display: block;
+}
+
+.btn-close {
+  display: none;
+}
+
+
+
+
+
+
+
+
+.chat-wrapper .content .sidebar-group .sidebar {
+  border-radius: 10px;
+}
+
+.slick-slider.swiper-wrapper button {
+  display: none !important;
+}
+
+#chats.left-sidebar-wrap>div {
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+table.table td i.bx.bxs-adjust,
+table.table td i.bx.bx-check-double {
+  margin-right: 5px;
+}
+
+.mob-scrn {
+  height: 313px !important;
+}
+
+.ticket-select {
+  z-index: 1000;
+}
+
+.ticket-select .css-10t8cs9-control {
+  background: none;
+}
+
+.customticket .form-select {
+  padding: 0px;
+}
+
+.css-b62m3t-container {
+  width: 100%;
+}
+
+.dropdown-item.night-mode span svg {
+  color: #ff875a;
+}
+
+.dark .css-1gtpy4b-control {
+  background: #2b2838;
+}
+
+.dark .css-13cymwt-control,
+.dark .css-t3ipsp-control {
+  background: #2b2838;
+  /* background-color: #2b2838; */
+}
+
+.dark .css-u6ao79-control {
+  background: #2b2838;
+}
+
+.dark .css-1dimb5e-singleValue {
+  color: #efeff2;
+}
+
+.dark .css-1jizb4d-menu {
+  background-color: #2b2838 !important;
+  color: #efeff2;
+}
+
+.dark .react-select__option {
+  background-color: #b43838 !important;
+  /* Default background color */
+  color: #000000;
+  /* Default text color */
+  font-size: 14px;
+}
+
+.dark .react-select__option--is-selected {
+  background-color: #FFDEDA;
+  /* Background color when selected */
+  color: #000000;
+  /* Text color when selected */
+}
+
+.dark .react-select__option--is-focused {
+  background-color: #602424;
+  /* Background color when focused */
+}
+
+/* Optional: Styling the control (dropdown) */
+.dark .react-select__control {
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.swiper-pagination-bullet {
+  display: none !important;
+}
+
+.dark .css-1m7qa7h-control {
+  border-color: rgba(199, 199, 199, 0.25);
+}
+
+.dark #chats.left-sidebar-wrap>div {
+  border: none;
+}
+
+.dark .loginbox .btn-primary {
+  color: #efeff2;
+}
+
+.dark .settings-inner-blk .country-select {
+  border: 1px solid #000;
+}
+
+.dark .form-select {
+  background: #000;
+}
+
+
+/*  Filename: ./components/ToggleSwitch.css*/
+.stickybar {
+  position: sticky;
+  top: 0;
+}
+
+.data-limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Adjust this number to set how many lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.spcace-data {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.custom-hover-btn {
+  background-color: #0d6efd;
+  /* Primary blue */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.custom-hover-btn:hover {
+  background-color: #dc3545;
+  /* Danger red */
+  color: white;
+}
+
+
+.blog-title-limit {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* Adjust this number to set how many lines you want to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal.show {
+  z-index: 3;
+  /* Ensure it stays above other elements */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dim the background */
+}
+
+.close,
+.btn-close-lg {
+  font-size: 1.5rem;
+  /* Increase the close icon size */
+  color: #000;
+  /* Set the color of the icon */
+  background: none;
+  /* Remove default button styles */
+  border: none;
+  cursor: pointer;
+}
+
+.close:hover,
+.btn-close-lg:hover {
+  color: #ff0000;
+  /* Add hover effect */
+}
+
+.modal-dialog:hover .btn-close {
+  display: block;
+}
+
+.btn-close {
+  display: none;
+}
+
+
+
+
+
+
+
+
+.chat-wrapper .content .sidebar-group .sidebar {
+  border-radius: 10px;
+}
+
+.slick-slider.swiper-wrapper button {
+  display: none !important;
+}
+
+#chats.left-sidebar-wrap>div {
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+}
+
+table.table td i.bx.bxs-adjust,
+table.table td i.bx.bx-check-double {
+  margin-right: 5px;
+}
+
+.mob-scrn {
+  height: 313px !important;
+}
+
+.ticket-select {
+  z-index: 1000;
+}
+
+.ticket-select .css-10t8cs9-control {
+  background: none;
+}
+
+.customticket .form-select {
+  padding: 0px;
+}
+
+.css-b62m3t-container {
+  width: 100%;
+}
+
+.dropdown-item.night-mode span svg {
+  color: #ff875a;
+}
+
+.dark .css-1gtpy4b-control {
+  background: #2b2838;
+}
+
+.dark .css-13cymwt-control,
+.dark .css-t3ipsp-control {
+  background: #2b2838;
+  /* background-color: #2b2838; */
+}
+
+.dark .css-u6ao79-control {
+  background: #2b2838;
+}
+
+.dark .css-1dimb5e-singleValue {
+  color: #efeff2;
+}
+
+.dark .css-1jizb4d-menu {
+  background-color: #2b2838 !important;
+  color: #efeff2;
+}
+
+.dark .react-select__option {
+  background-color: #b43838 !important;
+  /* Default background color */
+  color: #000000;
+  /* Default text color */
+  font-size: 14px;
+}
+
+.dark .react-select__option--is-selected {
+  background-color: #FFDEDA;
+  /* Background color when selected */
+  color: #000000;
+  /* Text color when selected */
+}
+
+.dark .react-select__option--is-focused {
+  background-color: #602424;
+  /* Background color when focused */
+}
+
+/* Optional: Styling the control (dropdown) */
+.dark .react-select__control {
+  background-color: #FFFFFF;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.swiper-pagination-bullet {
+  display: none !important;
+}
+
+.dark .css-1m7qa7h-control {
+  border-color: rgba(199, 199, 199, 0.25);
+}
+
+.dark #chats.left-sidebar-wrap>div {
+  border: none;
+}
+
+.dark .loginbox .btn-primary {
+  color: #efeff2;
+}
+
+.dark .settings-inner-blk .country-select {
+  border: 1px solid #000;
+}
+
+.dark .form-select {
+  background: #000;
+}
+
+
+/*  Filename: ./components/ToggleSwitch.css*/
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  /* Adjusted width */
+  height: 30px;
+  /* Adjusted height */
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: #dc3545;
+  /* Default background color (red for OFF) */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in-out;
+}
+
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 100%;
+  line-height: 30px;
+  /* Matches toggle height */
+  font-size: 14px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.inner:before {
+  padding-left: 10px;
+  color: #fff;
+  /* White text for better contrast */
+}
+
+.inner:after {
+  padding-right: 10px;
+  color: #fff;
+  /* White text for better contrast */
+  text-align: right;
+}
+
+.switch {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 3px;
+  /* Centered within height */
+  background: #fff;
+  /* Switch knob color */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32px;
+  /* Adjusted for new width */
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox:checked+.label {
+  background-color: #28a745;
+  /* Green background color for ON */
+}
+
+.checkbox:checked+.label .inner {
+  margin-left: 0;
+}
+
+.checkbox:checked+.label .switch {
+  right: 0;
+}
+
+
+.discount-price {
+  font-weight: bold; /* Makes text fully bold */
+  font-size: 22px;
+}
+
+
+.discount-price .original-price {
+  font-size: 22px;
+  text-decoration: line-through;
+}
+
+.student-name {
+  font-size: 16px;
+  /* Adjust as needed */
+  font-weight: bold;
+  display: block;
+}
+
+.student-phone {
+  font-size: 14px;
+  /* Adjust as needed */
+  color: #000000;
+  /* Optional: lighter text for the phone number */
+  margin-top: 2px;
+  /* Optional: space between name and phone number */
+}
+
+.student-info {
+  display: flex;
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: flex-start;
+  /* Align items to the left */
+}
+
+.card.overview-sec {
+  z-index: 0 !important;
+}
+
+.data-maanage {
+  z-index: 0 !important;
+}
+
+.data-inding-id {
+  z-index: 99999999999 !important;
+}
+
+
+
+/* General card styles */
+.ux-design-five .col-md-4 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.ux-design-five .col-md-4:hover {
+  transform: translateY(-5px);
+  /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  /* Soft shadow */
+}
+
+/* Video Thumbnail */
+.ux-design-five img {
+  /* width: 100% !important; */
+  border-radius: 5px;
+  /* Rounded corners */
+  object-fit: cover;
+  /* Ensures image scales proportionally */
+}
+
+/* Video modal overlay */
+.ux-design-five .position-relative .position-absolute {
+  background: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent overlay */
+}
+
+/* Pagination buttons */
+.pagination button {
+  min-width: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+.success-color {
+  background-color: #28a745;
+  /* Custom success green color */
+  color: #28a745;
+  /* Same color for text */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 8px;
+  /* Padding to make it look like a button */
+}
+
+.bg-cancel-600 {
+  background-color: #dc3545;
+  /* Custom cancel red color */
+  color: #dc3545;
+  /* Same color for text */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 8px;
+  /* Padding to make it look like a button */
+}
+
+.pedig-color {
+  background-color: #ffc107;
+  /* Custom pending yellow color */
+  color: #ffc107;
+  /* Same color for text */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 8px;
+  /* Padding to make it look like a button */
+}
+
+.course-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.instructor-name {
+  font-size: 0.875rem;
+  /* Slightly smaller font size */
+  color: #6c757d;
+  /* Muted gray color */
+}
+
+
+.custom-thumbnail {
+  height: 250px;
+  width: 100%;
+  /* Adjust the height as needed */
+}
+
+
+
+/* Specific options styling */
+
+.custom-bg {
+  background-color: #d5ddeb;
+  /* Custom blue background color */
+  color: #8000FF;
+  /* Custom blue text color */
+
+}
+
+.custom-text {
+  background-color: #94a3aa;
+  /* Light blue background */
+  color: #515f72;
+  /* Blue text color */
+}
+
+
+
+
+.pending-status {
+  background-color: #FFF5E5;
+  /* Light orange background */
+  color: #F7A036;
+  /* Orange text color */
+}
+
+.completed-status {
+  background-color: #E5FFEA;
+  /* Light green background */
+  color: #36F77A;
+  /* Green text color */
+}
+
+.canceld-table-data {
+  height: 32px !important;
+  margin: 0 3px !important;
+  min-width: 32px !important;
+  width: 32px !important;
+  background: #f1113333 !important;
+  display: flex;
+  /* Flexbox to center the content */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: center;
+  /* Horizontally center the content */
+  border-radius: 4px;
+  /* Optional: If you want rounded corners */
+}
+
+
+.Edit-data {
+  height: 32px !important;
+  margin: 0 3px !important;
+  min-width: 32px !important;
+  width: 32px !important;
+  background: #1a9f5333 !important;
+  display: flex;
+  /* Flexbox to center the content */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: center;
+  /* Horizontally center the content */
+  border-radius: 4px;
+  /* Optional: If you want rounded corners */
+}
+
+
+
+.view-data {
+  height: 32px !important;
+  margin: 0 3px !important;
+  min-width: 32px !important;
+  width: 32px !important;
+  background: #1a9f5333 !important;
+  color: #8000FF;
+  display: flex;
+  /* Flexbox to center the content */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: center;
+  /* Horizontally center the content */
+  border-radius: 4px;
+  /* Optional: If you want rounded corners */
+}
+
+
+.video-thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16 / 9;
+  /* Ensures the container maintains a 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  /* Rounded corners */
+}
+
+.video-thumbnail-wrapper img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 500px;
+  height: 400px;
+  object-fit: contain;
+  /* Ensures the image fits within the container without cropping */
+}
+
+
+.reply-data {
+  height: 32px !important;
+  margin: 0 3px !important;
+  min-width: 32px !important;
+  width: 32px !important;
+  background: #1a9f5333 !important;
+  color: #1ea767;
+  display: flex;
+  /* Flexbox to center the content */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: center;
+  /* Horizontally center the content */
+  border-radius: 4px;
+  /* Optional: If you want rounded corners */
+}
+
+.review-data-manage {
+  display: flex;
+  justify-content: end !important;
+  align-items: center;
+}
+
+.custom-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+
+.footer-contact-info {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.footer-contact-info .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  /* Icon color */
+}
+
+.footer-address,
+.footer-phone,
+.footer-email {
+  display: flex;
+  align-items: center;
+  /* Aligns text and icons vertically */
+}
+
+.footer-contact-info span {
+  flex-shrink: 0;
+  /* Prevents icons from shrinking */
+}
+
+.footer-contact-info p {
+  margin: 0;
+  /* Removes default paragraph margin */
+}
+
+.review-action {
+  display: flex !important;
+  justify-content: end !important;
+}
+
+.footer-widget-five {
+  z-index: 0 !important;
+}
+
+footer.footer.footer-five.mt-4 {
+  z-index: 0 !important;
+}
+
+.youtube-icon {
+  background-color: red;
+}
+
+.instagram-icon {
+  background-color: #C13584;
+  /* Instagram gradient color */
+}
+
+.telegram-icon {
+  background-color: #0088cc;
+}
+
+.discount_data {
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.animal-item {
+  position: relative;
+  display: block;
+}
+
+.animal-item .animal-text {
+  position: absolute;
+  width: 300px;
+  /* Match the width of the image */
+  height: 300px;
+  /* Match the height of the image */
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: .5s;
+  padding-bottom: 20px !important;
+  /* Ensure consistent padding */
+}
+
+.animal-item:hover .animal-text {
+  opacity: 1;
+}
+
+.dataimage img {
+  width: 100%;
+  /* Match the width of the image */
+  height: 100%;
+  /* Match the height of the image */
+  top: 0;
+  object-fit: cover;
+  left: 0;
+}
+
+
+.container.data-gallery {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lg-react-element img {
+  max-width: 400px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.twitter-icon i {
+  background-color: #1DA1F2;
+  /* Twitter Blue */
+}
+
+.linked-icon i {
+  background-color: #0077B5;
+  /* LinkedIn Blue */
+}
+
+.facebook-icon i {
+  background-color: #1877F2;
+  /* Facebook Blue */
+}
+
+.instagram-icon i {
+  background-color: #C13584;
+  /* Instagram Gradient */
+}
+
+.nav-link:hover i {
+  opacity: 0.8;
+  /* Slight fade effect on hover */
+  transform: scale(1.1);
+  /* Slight zoom effect */
+  transition: all 0.2s ease-in-out;
+}
+
+.twitter-icon:hover i {
+  background-color: #4AB3F4;
+  /* Lighter Twitter Blue */
+}
+
+.linked-icon:hover i {
+  background-color: #2896D4;
+  /* Lighter LinkedIn Blue */
+}
+
+.facebook-icon:hover i {
+  background-color: #5693F5;
+  /* Lighter Facebook Blue */
+}
+
+.instagram-icon:hover i {
+  background-color: #E668A7;
+  /* Lighter Instagram Gradient */
+}
+
+th input[type="checkbox"] {
+  margin: 0;
+  /* Removes any default margins */
+  transform: scale(1.2);
+  /* Optional: Slightly enlarge the checkbox for better visibility */
+  vertical-align: middle;
+  /* Ensures it aligns with the text */
+}
+
+td input[type="checkbox"] {
+  margin: 0;
+  /* Removes any default margins */
+  transform: scale(1.2);
+  /* Optional: Slightly enlarge the checkbox for better visibility */
+  vertical-align: middle;
+  /* Ensures it aligns with the text */
+}
+
+/* 📌 Blog Post Wrapper */
+
+/* 📌 Expanded View */
+.sub_course.expanded {
+  max-height: none;
+  /* 🔹 Show full content */
+}
+
+
+
+
+/* 📌 Headings */
+.sub_course h1 {
+  font-size: 2rem;
+  /* 32px */
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #007bff;
+  /* 🔹 Stylish underline */
+  padding-bottom: 5px;
+}
+
+.sub_course h2 {
+  font-size: 1.75rem;
+  /* 28px */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sub_course h3 {
+  font-size: 1.5rem;
+  /* 24px */
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.sub_course h4 {
+  font-size: 1.25rem;
+  /* 20px */
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.sub_course a:hover {
+  color: #f66962 !important;
+  font-size: 18px !important;
+}
+
+.sub_course h5 {
+  font-size: 1.125rem;
+  /* 18px */
+  font-weight: bold;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.sub_course h6 {
+  font-size: 1rem;
+  /* 16px */
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+/* 📌 Paragraphs */
+.sub_course p {
+  font-size: 1rem;
+  /* 16px */
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  /* 🔹 Better readability */
+  margin-bottom: 10px;
+}
+
+.blog-details ol {
+  padding-left: 17px;
+  margin: 0 0 10px;
+}
+
+/* 📌 Lists */
+.sub_course ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.sub_course ul li {
+  justify-content: center;
+  display: inline-flex;
+  padding-right: 10px;
+  margin: 0 0 10px;
+}
+
+.sub_course h1 strong,
+.sub_course  h2 strong,
+.sub_course h3 strong,
+.sub_course h4 strong,
+.sub_course  h5 strong,
+.sub_course  h6 strong {
+  font-size: 1rem;
+  /* 16px */
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.sub_course h1 a,
+.sub_course h2 a,
+.sub_course h3 a,
+.sub_course h4 a,
+.sub_course h5 a,
+.sub_course h6 a {
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Bold text */
+  color: #229e41; /* Green color */
+  margin-bottom: 4px; /* Space below the links */
+  text-decoration: none; /* Remove underline */
+}
+
+
+.sub_course ul li p {
+  margin: 0;
+  color: #fff;
+  font-family: Oswald;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sub_course img {
+  width: 950px !important;
+  height: auto !important;
+
+}
+
+.sub_course ul li {
+  list-style-type: disc !important;
+  /* Default: Dots for unordered list */
+  padding-left: 20px !important;
+  /* Indentation */
+  font-size: 14px !important;
+  /* Font size */
+}
+
+.sub_course ol li {
+  list-style-type: decimal !important;
+  /* Default: Numbers for ordered list */
+  padding-left: 20px !important;
+  /* Indentation */
+  font-size: 14px !important;
+  /* Font size */
+}
+
+li {
+  margin: 5px 0;
+  /* Spacing between list items */
+}
+
+/* .tags-blog ul li a { background: #FFF; color: #080A0D; font-family: Oswald; font-size: 16px; font-style: normal; font-weight: 400; line-height: normal; display: inline-block; padding: 7px 16px; } */
+.sub_course ul li a {
+  background: #484848;
+  color: #ffffff;
+  font-family: Oswald;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+  padding: 6px 17px;
+  border-radius: 5px;
+}
+
+.sub_course ul li li a:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+/* 📌 Links */
+.sub_course a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sub_course a:hover {
+  text-decoration: underline;
+}
+
+/* 📌 Images */
+.sub_course img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Code Blocks */
+.sub_course pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+}
+
+.sub_course code {
+  background: #eee;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+}
+
+/* 📌 Read More / Expand Button */
+.read-more-btn {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.read-more-btn button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 5px;
+}
+
+.read-more-btn button:hover {
+  background-color: #0056b3;
+}
+
+.footer-logo {
+  width: 200px; /* Set a fixed width */
+  height: auto; /* Maintain aspect ratio */
+}
+.profile-image {
+  width: 145px !important;     /* Fixed width */
+  height: 145px !important;     /* Fixed height */
+  object-fit: cover !important; /* Crop and fit the image */
+  border-radius: 7px 0 0 7px !important
+  
+  ;
+}
+
+.btn-close {
+  opacity: 1 !important; /* Ensure always visible */
+  visibility: visible !important;
+}
+
+
+.modal.show {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.modal-dialog {
+  max-width: 500px;
+  margin: auto;
+}
+
+
+.custom-thumbnail {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+.blog-limits {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Max 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.single-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Max 1 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stdentside span {
+  width: 120px !important;
+  border-radius: 50%  !important;
+  height: 120px  !important;
+  border: 3px solid #ffffff  !important;
+  background-color: #002058  !important; /* Adjust color as needed */
+  display: flex  !important;
+  justify-content: center  !important;
+  align-items: center  !important;
+  font-size: 1em  !important;
+  color: #ffffff  !important;
+  margin-left: 60px  !important;
+  text-align: center  !important;
+}
+.card-subtitle {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Max 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* Remove hover effect on close button */
+.custom-close-btn:hover {
+  opacity: 1; /* Keeps the button visible, without hover effect */
+  background: none; /* Removes any background on hover */
+  border: none; /* Removes border */
+}
+/* Custom modal size */
+.modal-image {
+  background: transparent;
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  max-width: 300px; /* optional to make sure it is responsive */
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .theiaStickySidebar {
+    padding: 2px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .settings-widget {
+    margin-bottom: 20px;
+  }
+
+  .settings-menu {
+    padding: 5px !important;
+  }
+
+  .profile-bg {
+    height: 140px;
+  }
+
+  .profile-name h4 {
+    font-size: 1.2rem;
+  }
+
+  .profile-name p {
+    font-size: 0.8rem;
+  }
+
+  .settings-menu h3 {
+    font-size: 1.1rem;
+  }
+
+  .nav-item a {
+    font-size: 0.95rem;
+  }
+
+  .nav-item {
+    margin-bottom: 10px;
   }
 }
+
+/* Mobile Sidebar - Full height and scrollable */
+.data_sidebar {
+  z-index: 1050; /* Ensure the sidebar is above other elements */
+  max-height: 100vh;
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+a.image-logo {
+  height: auto;
+  width: 110px;
+}
+
+
+input[type="date"] {
+  display: block !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  color :black !important ;
+}
+
+.log-wrap .login-wrapper {
+  flex-direction: column;
+  flex-wrap: unset;
+  justify-content: unset;
+}
+
+.log-wrap .google-bg {
+  margin-top: auto;
+}
+
+.error-page .main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  min-height: unset;
+  padding-top: 50px;
+}
+
+
+
+
+

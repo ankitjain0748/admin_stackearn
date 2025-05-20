@@ -1,0 +1,95 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #002058 !important;
+  font-weight: 500 !important;
+}
+
+svg {
+  color: #000000;
+  font-size: 20px !important;
+}
+
+
+
+a {
+  text-decoration: none !important;
+}
+
+
+
+a:hover,
+a:active,
+a:focus {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+.cancelled-status {
+  background-color: #FFE5E5;
+  /* Light red background */
+  color: #F73636 !important;
+  /* Red text color */
+}
+
+
+.cancelled-status svg {
+  color: red !important;
+}
+
+.cancelled-status svg:hover {
+  color: rgb(138, 58, 58) !important;
+}
+
+
+.upcoming-status {
+  background-color: #DFF5FF;
+  /* Light blue background */
+  color: #0367F7;
+  /* Blue text color */
+}
+
+.upcoming-status:hover {
+  background-color: #13a6eb;
+  /* Light blue background */
+  color: #0d2d58;
+  /* Blue text color */
+}
+
+
+.dash-pagination .pagination li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+}
+
+
+.dash-pagination .pagination li.active a,
+.dash-pagination .pagination li:hover a {
+  background: #ff4667 !important;
+  border: 1px solid #ff4667 !important;
+  color: #fff !important;
+}
+
+.video-thumbnails {
+  height: 200px !important;
+  /* Set desired height */
+  object-fit: cover;
+  /* Ensures the image is properly cropped */
+  width: 100%;
+  /* Maintain full width */
+}
+
+.blog-title a:hover {
+  color: #f66962;
+}
