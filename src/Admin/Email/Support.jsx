@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import StudentSidebar from "../sidebar";
 import { Link } from "react-router-dom";
 import Listing from "../Api/Listing";
-import SubDashboard from "../components/SubDashboard";
 import LoadingPage from "../components/LoadingPage";
 import Email from "./Email";
 
@@ -65,12 +64,10 @@ const Support = () => {
         <LoadingPage />
       ) : (
         <div className="main-wrapper">
-          <SubDashboard title={"Subscribe History"} />
           <div className="page-content mt-5">
             <div className="container">
               <div className="row">
                 <StudentSidebar />
-
                 <div className="col-xl-9 col-lg-9">
                   <div className="settings-widget card-details">
                     <div className="settings-menu p-0">

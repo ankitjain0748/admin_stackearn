@@ -15,7 +15,10 @@ const AddBlog = () => {
     Image: "",
     content: "",
     title: "",
-    short_content: ""
+    short_content: "",
+    meta_title: "",
+    meta_description: "",
+    meta_keyword: "",
   });
 
   const fetchInstructorData = async () => {
@@ -124,14 +127,41 @@ const AddBlog = () => {
           <form onSubmit={handleSubmit} className="mt-2">
             {/* First Name */}
             <div className="form-group mt-2">
+              <label> Meta Title</label>
+              <input
+                type="text"
+                name="meta_title"
+                value={instructorDetails.meta_title}
+                onChange={handleInputChange}
+                className="form-control"
+                required
+              />
+            </div>
+            <div className="form-group mt-2">
+              <label>Meta Description</label>
+              <input
+                type="text"
+                name="meta_description"
+                value={instructorDetails.meta_description}
+                onChange={handleInputChange}
+                className="form-control"
+                required
+              />
+            </div>
+            <div className="form-group mt-2">
+              <label>Meta Keyword</label>
+              <input
+                type="text"
+                name="meta_keyword"
+                value={instructorDetails.meta_keyword}
+                onChange={handleInputChange}
+                className="form-control"
+                required
+              />
+            </div>
+
+            <div className="form-group mt-2">
               <label>Image</label>
-              {/* <input
-                        type="file"
-                        name="Image"
-                        value={instructorDetails.Image}
-                        onChange={handleInputChange}
-                        className="form-control"
-                      /> */}
               <ImageUpload
                 value={instructorDetails.Image}
                 onImageUpload={(url) =>

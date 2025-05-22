@@ -1,18 +1,11 @@
-import toast from "react-hot-toast";
-import Image from "../components/Image";
+import React from "react";
 import User16 from "../../assert/course-02.jpg";
-import Listing from "../Api/Listing";
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function ProfileIcon() {
-  const navigate = useNavigate();
-
 
   const users = useSelector(state => state.users.users);
 
-  console.log("users", users)
   const listing = users?.[0] || "";
   const profile = users?.[1] || "";
 

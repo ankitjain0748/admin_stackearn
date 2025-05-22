@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import StudentSidebar from "../sidebar";
 import StudentSettingPageHeader from "./settingPageHeader";
-import SubDashboard from "../components/SubDashboard";
 import Listing from "../Api/Listing";
 import toast from "react-hot-toast";
 
@@ -54,7 +53,7 @@ const StudentLinkedAccounts = () => {
     } catch (error) {
       console.error("Form submission error:", error);
       toast.error("An error occurred while saving the profile.");
-    } 
+    }
   }
 
   // Update form fields when listing changes
@@ -77,11 +76,6 @@ const StudentLinkedAccounts = () => {
   return (
     <div className="main-wrapper">
       <>
-        {/* Header */}
-        <SubDashboard activeMenu={"Dashboard"} />
-        {/* /Header */}
-        {/* Breadcrumb */}
-
         {/* /Breadcrumb */}
         {/* Page Content */}
         <div className="page-content mt-5">
@@ -157,7 +151,7 @@ const StudentLinkedAccounts = () => {
                             </div>
                           </div>
                           <div className="col-md-12">
-                          <button className="login-head button" type="submit" disabled={loading}>
+                            <button className="login-head button" type="submit" disabled={loading}>
 
                               {loading ? "Loading..." : "Bank Details"}
                             </button>

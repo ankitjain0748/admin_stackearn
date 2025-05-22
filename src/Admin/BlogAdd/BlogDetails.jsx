@@ -40,17 +40,17 @@ const BlogDetails = () => {
     }, [Id]);
     return (
         <div className='main-wrapper'>
-            
+
             <section className="p-4">
                 <div className="row">
                     <div className="col-lg-9 col-md-12">
                         {/* Blog Post */}
-                                         <button
-                className="btn btn-outline-secondary mb-3"
-                onClick={() => navigate(-1)}
-            >
-                ← Back
-            </button>
+                        <button
+                            className="btn btn-outline-secondary mb-3"
+                            onClick={() => navigate(-1)}
+                        >
+                            ← Back
+                        </button>
                         <div className="blog">
                             <div className="">
                                 <img
@@ -62,7 +62,7 @@ const BlogDetails = () => {
                             </div>
 
                             <h3 className="blog-details mt-2 mb-3">
-               
+
                                 {listing?.title}
                             </h3>
                             <div className="blog-content">

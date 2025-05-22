@@ -1,16 +1,17 @@
-import  { useEffect, useRef, useState } from "react";
-import AddressIcon from "../../assert/course-02.jpg";
-import ReviewIcon from "../../assert/course-02.jpg";
-import ProfileAvatar from "../../assert/course-02.jpg";
-import PhoneIcon from "../../assert/course-02.jpg";
-import EmailIcon from "../../assert/course-02.jpg";
-import CoursesIcon from "../../assert/course-02.jpg";
+import { useEffect, useRef, useState } from "react";
+import AddressIcon from "../../assert/address-icon.png";
+import ReviewIcon from "../../assert/review-icon.png";
+import ProfileAvatar from "../../assert/profile-avatar.jpg";
+import PhoneIcon from "../../assert/phone-icon.png";
+import EmailIcon from "../../assert/email-icon.png";
+import CoursesIcon from "../../assert/courses-icon.png";
 import LoadingPage from "../components/LoadingPage";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import { FaCheckCircle } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
 import { FaFacebook, FaInstagram, FaRegClock, FaRupeeSign, FaTimes, FaTwitter } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
-import SubDashboard from "../components/SubDashboard";
 import Listing from "../Api/Listing";
 import { MdOutlineVerified } from "react-icons/md";
 import PaymentOut from "./PaymentOut";
@@ -90,13 +91,13 @@ export default function ProfileId() {
             case "active":
                 return {
                     className: "text-success font-bold",
-                    icon: <MdOutlineVerified size={18} />,
+                    icon: <MdOutlineVerified size={18} color="text-success" />,
                     label: "Active",
                 };
             case "inactive":
                 return {
                     className: "text-danger font-bold",
-                    icon: <FaTimes style={{ marginRight: "8px" }} />,
+                    icon: <FaTimes style={{ marginRight: "8px" }} color="text-danger" />,
                     label: "Inactive",
                 };
             case "registered":
@@ -122,27 +123,22 @@ export default function ProfileId() {
 
     const { className, icon, label } = getStatusDetails(status);
 
-
-
     const datapayment = (Course?.UnPaidAmounts !== 0
         ? ((Course?.UnPaidAmounts || 0) - (listing?.totalPaymentWithdrawal || 0) - (listing?.totalPayoutPayment))
         : ((Course?.lastTodayIncome || 0) - (Course?.UnPaidAmounts || 0))
     );
 
-console.log("Course" ,Course)
 
 
     return (
         <>
             <div>
                 {/* Breadcrumb */}
-                <SubDashboard />
                 {loading ? (
                     <LoadingPage />
                 ) : (
                     <>
-
-                        <div className="page-banner mt-4 instructor-bg-blk md-flex align-items-center"          >
+                        <div className="page-banner mt-4 instructor-bg-blk md-flex align-items-center">
                             <div className=" mt-4">
                                 <div className="row">
                                     <div className="col-md-12 col-12 ">
@@ -178,10 +174,12 @@ console.log("Course" ,Course)
                                             <h4 className="mt-3 mb-2">
                                                 <Link to="#">{listing?.user?.name}</Link>
                                             </h4>
-                                            <p className={className}>
-                                                {icon} {label}
+                                            <p className={className + " d-flex align-items-center gap-2"}>
+                                                <span className="d-flex align-items-center">
+                                                    {icon}
+                                                    <span className="ms-1">{label}</span>
+                                                </span>
                                             </p>
-
 
                                         </div>
                                     </div>
@@ -190,7 +188,7 @@ console.log("Course" ,Course)
                         </div>
                         {/* Breadcrumb */}
                         {/* Course Content */}
-                        <section className="page-content course-sec">
+                        <section className="course-sec">
                             <div className="pagepadding">
                                 <div className="row">
                                     <div className="col-lg-9">
@@ -238,7 +236,7 @@ console.log("Course" ,Course)
                                                                             {
                                                                                 (Course?.referred_user_pay_weekly || 0) + (Course?.referred_user_pay || 0) - (listing?.totalweekPaymentWithdrawal || 0)
                                                                                 - (listing?.totalweekPayoutPayment || 0)
-                                                                         }
+                                                                            }
                                                                         </h2>
                                                                     </div>
                                                                 </div>
@@ -676,7 +674,7 @@ console.log("Course" ,Course)
                                                                 className="icon-wrapper d-flex justify-content-center align-items-center rounded-circle bg-primary text-white"
                                                                 style={{ width: "40px", height: "40px" }}
                                                             >
-                                                                <i className="fab fa-youtube"></i>
+                                                                <FaYoutube size={20} />
                                                             </div>
                                                             <div style={{
                                                                 "marginLeft": "4px"

@@ -6,7 +6,7 @@ import Pagination from "../components/Pagination";
 import DashboardLayout from "../common/DashboardLayout";
 import { Search } from "react-feather";
 import debounce from "lodash.debounce";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 
 const AdminPayment = () => {
   const [loading, setLoading] = useState(false);

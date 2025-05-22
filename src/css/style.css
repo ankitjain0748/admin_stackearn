@@ -15499,14 +15499,6 @@ input[type="password"]::-ms-clear {
   border-radius: 10px;
 }
 
-.page-content {
-  padding: 60px 17px 60px !important;
-  background: #fbfcff !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-}
 
 .instructor-page-content {
   padding: 60px 0 30px;
@@ -16070,81 +16062,16 @@ input[type="password"]::-ms-clear {
 	49. Instructor Profile
 -----------------------*/
 
-/* .page-banner.instructor-bg-blk {
-  padding: 32px 0;
-  text-align: center;
-  background: url(../img/instructor/instructor-bg-banner.png) #1565c0;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
-.profile-info-blk {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.profile-info-blk .profile-info-img {
-  display: block;
-  max-width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  border: 5px solid #ffffff;
-  margin-bottom: 8px;
-}
 
-.profile-info-blk h4 {
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 0px;
-}
 
-.profile-info-blk h4 a {
-  font-size: 32px;
-  font-weight: 600;
-  color: #fff;
-}
 
-.profile-info-blk h4 a:hover {
-  color: #f66962;
-}
 
-.profile-info-blk h4 span {
-  background: #fff;
-  padding: 2px 10px;
-  font-size: 14px;
-  border-radius: 5px;
-  margin-left: 20px;
-}
 
-.profile-info-blk p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-}
 
-.profile-info-social {
-  margin-top: 8px;
-  margin-bottom: 0px;
-}
 
-.profile-info-social li a {
-  color: #ffffff;
-}
 
-.profile-info-social li a:hover {
-  color: #f66962;
-}
-
-.profile-info-social li:not(:last-child) {
-  margin-right: 14px;
-}
 
 .sidebar-tag-labels ul {
   display: flex;

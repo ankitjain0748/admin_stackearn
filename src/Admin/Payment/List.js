@@ -5,7 +5,7 @@ import { LiaRupeeSignSolid } from "react-icons/lia";
 import Pagination from "../components/Pagination";
 import DashboardLayout from "../common/DashboardLayout";
 import { Search } from "react-feather";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 
 const List = () => {
   const [loading, setLoading] = useState(false);

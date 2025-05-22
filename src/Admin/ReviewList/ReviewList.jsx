@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Listing from "../Api/Listing";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 import MessagePopup from "../components/MessagePopup"
 import LoadingPage from "../components/LoadingPage";
 import { Search } from "react-feather";

@@ -4,7 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import PaymentStatus from "../components/PaymentStatus";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 
 
 function Payment() {

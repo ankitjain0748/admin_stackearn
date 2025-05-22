@@ -10,7 +10,7 @@ import { Search } from "react-feather";
 import debounce from "lodash.debounce";
 import NoDataPage from "../components/NoDataPage";
 import Image from "../components/Image"
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 const BlogView = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);

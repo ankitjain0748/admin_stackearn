@@ -120,7 +120,7 @@ const Courses = () => {
                             <span className="badge bg-primary position-absolute top-0 start-0 m-2 text-uppercase">
                               {item.category || "Uncategorized"}
                             </span>
-                            <Link to={`/course-details/${item._id}`}>
+                            <Link to={`/admin/course-details/${item._id}`}>
                               <img
                                 src={item.courseImage || course02}
                                 className="card-img-top"
@@ -151,7 +151,7 @@ const Courses = () => {
                               />
                               <div>
                                 <h6 className="mb-0">
-                                  <Link to={`/course-details/${item._id}`} className="text-decoration-none text-dark">
+                                  <Link to={`/admin/course-details/${item._id}`} className="text-decoration-none text-dark">
                                     {item?.InstrutorId?.firstName || "Instructor"}
                                   </Link>
                                 </h6>
@@ -168,7 +168,7 @@ const Courses = () => {
 
                             {/* Course Title */}
                             <h5 className="card-title">
-                              <Link to={`/course-details/${item._id}`} className="text-dark text-decoration-none">
+                              <Link to={`/admin/course-details/${item._id}`} className="text-dark text-decoration-none">
                                 {item?.title || "Untitled Course"}
                               </Link>
                             </h5>

@@ -23,6 +23,7 @@ import Instrtour from "./Admin/Instrutor/Instrtour.jsx";
 import AddInstrtour from "./Admin/Instrutor/AddInstrtour.jsx";
 import ViewProfile from "./Admin/Instrutor/ViewProfile.jsx";
 import AddCourses from "./Admin/Course/AddCourse.jsx";
+import CourseDetails from "./Admin/Course/CourseDetails.jsx";
 import CourseLists from "./Admin/Course/Courses.jsx";
 import PaymentList from "./Admin/Payment/List.js"
 import AdminPayment from "./Admin/Payment/Adminpayment.js"
@@ -50,7 +51,7 @@ import Payout from './Admin/payout/Payout.jsx';
 function App() {
   return (
     <>
-    <Toaster className="top-right" />
+      <Toaster className="top-right" />
       <BrowserRouter >
         <Routes>
           <Route path="/admin/login" element={<AdminLogin />} />
@@ -72,24 +73,14 @@ function App() {
             path="/admin/admin-change-password"
             element={<AdminChangePassword />}
           />
-          <Route
-            path="/admin/admin-social-profile"
-            element={<AdminSocialProfile />}
-          />
+          <Route path="/admin/admin-social-profile" element={<AdminSocialProfile />} />
 
-          <Route
-            path="/admin/admin-linked-accounts"
-            element={<AdminLinkedAccount />}
-          />
+          <Route path="/admin/admin-linked-accounts" element={<AdminLinkedAccount />} />
 
-          <Route
-            path="/admin/user-profile-Id/:id"
-            element={<ProfileId />}
-          />
+          <Route path="/admin/user-profile-Id/:id" element={<ProfileId />} />
 
           <Route path="/admin/instructor" element={<Instrtour />} />
           <Route path="/admin/add/instructor" element={<AddInstrtour />} />
-
           <Route path="/admin/add/instructor/:Id" element={<ViewProfile />} />
 
           <Route path="/admin/update/instructor/:Id" element={<AddInstrtour />} />
@@ -97,6 +88,7 @@ function App() {
           <Route path="/admin/add-course" element={<AddCourses />} />
           <Route path="/admin/update-course/:Id" element={<AddCourses />} />
           <Route path="/admin/course-list" element={<CourseLists />} />
+          <Route path="/admin/course-details/:Id" element={<CourseDetails />} />
           <Route path="/admin/course-content-list" element={<CourseContentList />} />
           <Route path="/admin/payment-list" element={<PaymentList />} />
           <Route path="/admin/review-list" element={<ReviewLists />} />

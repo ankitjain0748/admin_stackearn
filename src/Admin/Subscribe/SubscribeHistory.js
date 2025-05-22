@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Listing from "../Api/Listing";
 import LoadingPage from "../components/LoadingPage";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 import DeleteTable from "../common/DeleteTable";
 import Pagination from "../components/Pagination";
 import DashboardLayout from "../common/DashboardLayout";

@@ -30,7 +30,7 @@ const DashboardLayout = ({ children }) => {
 
   useEffect(() => {
     const controller = new AbortController();
-    const { signal } = controller;
+    const signal = controller.signal;
 
     const token = localStorage.getItem("AdminToken");
 
@@ -39,16 +39,11 @@ const DashboardLayout = ({ children }) => {
       return;
     }
 
-    // Only call API if data isn't already in Redux or sessionStorage
-    const alreadyFetched = sessionStorage.getItem("profileFetched");
-
-    if (!alreadyFetched) {
-      fetchData(signal);
-      sessionStorage.setItem("profileFetched", "true");
-    }
+    fetchData(signal); // 👈 This line runs the API call
 
     return () => controller.abort();
   }, []);
+
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);

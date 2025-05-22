@@ -1,7 +1,4 @@
 import { MdEdit } from "react-icons/md";
-import { LiaEdit } from "react-icons/lia";
-
-
 import { Link } from "react-router-dom";
 
 function EditData({ link }) {

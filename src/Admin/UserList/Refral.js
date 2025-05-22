@@ -3,9 +3,9 @@ import Listing from "../Api/Listing";
 import { Search } from "react-feather";
 import { Link, useParams } from "react-router-dom";
 import Pagination from "../components/Pagination";
-import  User2  from "../../assert/course-02.jpg";
+import User2 from "../../assert/course-02.jpg";
 import { LiaRupeeSignSolid } from "react-icons/lia";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 
 
 function Refral() {
@@ -98,11 +98,11 @@ function Refral() {
                                     <td># {item?.referral_code}</td>
                                     <td>
                                         <h2 className="table-avatar d-flex align-items-center">
-                                            <Link to="/student/student-profile" className="avatar">
+                                            <Link to={`/admin/user-profile-Id/${item?._id}`} className="avatar">
                                                 <img className="avatar-img" src={item?.profileImage || User2} alt="User Image" />
                                             </Link>
                                             <div className="student-info">
-                                                <Link to="/student/student-profile">{item?.name}</Link>
+                                                <Link to={`/admin/user-profile-Id/${item?._id}`}>{item?.name}</Link>
                                                 <div className="student-phone">
                                                     {item?.phone_code} {item?.phone_number}
                                                 </div>
@@ -112,7 +112,7 @@ function Refral() {
                                     <td>
                                         <h2 className="table-avatar d-flex align-items-center">
                                             <div className="student-info">
-                                                <Link to="/student/student-profile">{item?.CourseId?.title || "No Course Purchase"}</Link>
+                                                <Link to={`/admin/course-details/${item?.CourseId?._id}`}>{item?.CourseId?.title || "No Course Purchase"}</Link>
                                                 <div className="student-phone">
                                                     {item?.paymentDetails && item.paymentDetails.length > 0 && (
                                                         item.paymentDetails.map((payment, payIndex) => (

@@ -1,7 +1,7 @@
 // src/pages/List.jsx
 import React, { useEffect, useState, useCallback } from "react";
 import Listing from "../Api/Listing";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 import MessagePopup from "../components/MessagePopup";
 import DeleteTable from "../common/DeleteTable";
 import Image from "../components/Image";

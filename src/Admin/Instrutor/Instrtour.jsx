@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Listing from "../Api/Listing";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 import User2 from "../../assert/user16.jpg";
 import DeleteTable from "../common/DeleteTable";
-import EditData from "../components/EditData";
+import EditData from "../common/EditData";
 import { Search } from "react-feather";
 import debounce from "lodash.debounce";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Listing from "../Api/Listing";
-import DateFormate from "../components/DateFormate";
+import DateFormate from "../common/DateFormate";
 import  User2  from "../../assert/course-02.jpg";
 import DeleteTable from "../common/DeleteTable";
 import ViewIcon from "../components/ViewIcon";
