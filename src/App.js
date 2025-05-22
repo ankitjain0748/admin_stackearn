@@ -1,7 +1,6 @@
 import './App.css';
 import "./css/style.css"
 import "./css/Admin.css"
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -12,8 +11,6 @@ import WebniarView from "./Admin/Webniar/WebniarList.jsx"
 import WebniarAdd from "./Admin/Webniar/AddWebinar.jsx"
 import SubscribeHistory from "./Admin/Subscribe/SubscribeHistory.js";
 import UserList from "./Admin/UserList/UserList.jsx";
-
-
 import AdminChangePassword from "./Admin/setting/studentChangePassword.jsx";
 import AdminLinkedAccount from "./Admin/setting/studentLinkedAccount.jsx";
 import AdminProfile from "./Admin/setting/studentSetting.jsx";
@@ -31,7 +28,6 @@ import ReviewLists from "./Admin/ReviewList/ReviewList.jsx"
 import BlogView from "./Admin/BlogAdd/BlogView.jsx"
 import BlogAdd from "./Admin/BlogAdd/AddBlog.jsx"
 import BlogDetails from "./Admin/BlogAdd/BlogDetails.jsx"
-
 import CourseContentList from "./Admin/CourseContent/Courses.jsx"
 import OnlineContent from "./Admin/OnlineAddCourse/Courses.jsx"
 import AddCourseOnlineContent from "./Admin/OnlineAddCourse/AddOnlineCourse.jsx"
