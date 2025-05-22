@@ -152,14 +152,15 @@ a:focus {
   margin-right: 14px;
 }
 
-
 .page-banner.instructor-bg-blk {
   padding: 32px 0;
   text-align: center;
-  background: url(../assert/instructor-bg-banner.png) #1565c0;
-  background-repeat: no-repeat;
+  background: url('../assert/instructor-bg-banner.png') no-repeat center center;
+  background-color: #1565c0;
   background-size: cover;
+  color: #fff; /* Optional: ensures text is visible on dark background */
 }
+
 
 .profile-info-blk {
   display: -webkit-box;
