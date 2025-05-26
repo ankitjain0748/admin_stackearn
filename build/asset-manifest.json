@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d447f480.css",
+    "main.js": "/static/js/main.eedccb2b.js",
+    "static/media/delete.webp": "/static/media/delete.0cdd3847f7f2e4f3714e.webp",
+    "static/media/logo.png": "/static/media/logo.79e99461d55c76faf966.png",
+    "static/media/blog-05.jpg": "/static/media/blog-05.50f87dc7c2e67d8aa514.jpg",
+    "static/media/course-02.jpg": "/static/media/course-02.fc98700f61318a62a647.jpg",
+    "static/media/login-img.png": "/static/media/login-img.5b64461ed65c41977280.png",
+    "static/media/icon-2.svg": "/static/media/icon-2.e1cccf592bd1bb680352ed31ff6d661b.svg",
+    "static/media/user-icon.svg": "/static/media/user-icon.8418973b3fec874efdc6e0400d25e051.svg",
+    "static/media/people.svg": "/static/media/people.3a999e8d1672b0293de4c7e7e92381b1.svg",
+    "static/media/chapter.svg": "/static/media/chapter.5ada686a7f250ea07923d9dab8b7de44.svg",
+    "static/media/mobile.svg": "/static/media/mobile.a68e44a96c513e82f891a85fad0825b1.svg",
+    "static/media/timer.svg": "/static/media/timer.1e6a79a8d1bf26fea48f6bb25913a6c9.svg",
+    "static/media/key.svg": "/static/media/key.c9d0565a525489548f4989448315cfa7.svg",
+    "static/media/cloud.svg": "/static/media/cloud.987d19db5e719b84fd603f017732d556.svg",
+    "static/media/icon-01.svg": "/static/media/icon-01.84fb8184e6f90ae5e46dd7d55e77abfc.svg",
+    "static/media/chart.svg": "/static/media/chart.cbc2e2b8003f23251e68db1c7ea7a918.svg",
+    "static/media/teacher.svg": "/static/media/teacher.75497f6dd2191c0e724e855ab1bd1001.svg",
+    "static/media/import.svg": "/static/media/import.fa0c00e3f96638b9210d00acfc011956.svg",
+    "index.html": "/index.html",
+    "static/media/play.svg": "/static/media/play.b7b729a9a7f0d7f0fd0f3a4398ca725f.svg",
+    "static/media/video.svg": "/static/media/video.68c561a4ef07cfce887cabdbe5b6fcaa.svg",
+    "main.d447f480.css.map": "/static/css/main.d447f480.css.map",
+    "main.eedccb2b.js.map": "/static/js/main.eedccb2b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d447f480.css",
+    "static/js/main.eedccb2b.js"
+  ]
+}
