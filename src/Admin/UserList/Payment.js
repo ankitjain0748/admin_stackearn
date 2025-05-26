@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import Listing from "../Api/Listing";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import Pagination from "../components/Pagination";
 import { LiaRupeeSignSolid } from "react-icons/lia";
 import PaymentStatus from "../components/PaymentStatus";
 import DateFormate from "../common/DateFormate";
-
 
 function Payment() {
     const { id } = useParams();
