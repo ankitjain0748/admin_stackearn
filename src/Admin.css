@@ -155,7 +155,6 @@ a:focus {
 .page-banner.instructor-bg-blk {
   padding: 32px 0;
   text-align: center;
-  /* background: url('../assert/instructor-bg-banner.png') no-repeat center center; */
   background-color: #78ade9;
   background-size: cover;
   color: #fff; /* Optional: ensures text is visible on dark background */
