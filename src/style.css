@@ -13500,7 +13500,8 @@ textarea:focus {
 -----------------------*/
 
 .login-bg {
-  background-image: url("/assert/login-bg.png");
+  /* background-image: url("/assert/login-bg.png"); */
+  background-color: #f7f7f7;
   background-size: cover;
   top: 0;
   left: 0;
