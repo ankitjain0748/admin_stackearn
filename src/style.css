@@ -13500,7 +13500,7 @@ textarea:focus {
 -----------------------*/
 
 .login-bg {
-  background-image: url("../assert/login-bg.png");
+  background-image: url("/assert/login-bg.png");
   background-size: cover;
   top: 0;
   left: 0;
@@ -16712,7 +16712,9 @@ ul {
 /* .page-banner.student-bg-blk {
   padding: 14px 0;
   text-align: center;
-  background: url(../img/students/student-bg-banner.png) #ffb54a;
+  background: url(../img/students/student-bg-banner
+  
+  ) #ffb54a;
   background-repeat: no-repeat;
   background-size: cover;
 } */
