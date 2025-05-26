@@ -1,4 +1,4 @@
-import  logo  from "../../assert/logo.png";
+import logo from "../../assert/logo.png";
 import LoginImg from "../../assert/login-img.png";
 
 import FeatherIcon from "feather-icons-react";
@@ -103,7 +103,7 @@ const Login = () => {
                 toast.error(response.data.message);
             }
         } catch (error) {
-            console.log("error",error)
+            console.log("error", error)
             toast.error(error?.response?.data?.message);
         } finally {
             setLoading(false);
@@ -111,93 +111,81 @@ const Login = () => {
     };
     return (
         <>
-            <div className="main-wrapper log-wrap">
-                <div className="row">
-                    {/* Login Banner */}
-                    <div className="col-md-6 login-bg">
-                        <div className="owl-carousel login-slide owl-theme">
-                                <div  className="welcome-login">
-                                    <div className="login-banner">
-                                        <img src={LoginImg} className="img-fluid" alt="Logo" />
-                                    </div>
-                                    <div className="mentor-course text-center">
-                                        <h2>Welcome to <br /> DreamsLMS Courses</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
+            <div className="container py-5">
+                <div className="row justify-content-center">
+                    {/* Left Column - Login Section */}
+                    <div className="col-md-6 bg-light p-5  ">
+                        <div className="text-center mb-4">
+                            <Link to="/">
+                                <img src={logo} className="img-fluid mb-3" alt="Logo" style={{ maxWidth: '150px' }} />
+                            </Link>
+                            <h2>Sign into Your Account</h2>
                         </div>
-                    </div>
-                    {/* /Login Banner */}
-                    <div className="col-md-6 login-wrap-bg">
-                        {/* Login */}
-                        <div className="login-wrapper">
-                            <div className="loginbox">
-                                <div className="w-100">
-                                    <div className="img-logo">
-                                        <Link to="/">
-                                            <img src={logo} className="img-fluid" alt="Logo" />
-                                        </Link>
-                                    </div>
-                                    <h1>Sign into Your Account</h1>
-                                    <form onSubmit={handleForms}>
 
-                                        <div className="input-block">
-                                            <label className="form-control-label">Email</label>
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                required
-                                                value={Regs.email}
-                                                onChange={handleInputs}
-                                                className={`form-control ${errors.email ? "is-invalid" : ""}`}
-                                                placeholder="Enter your email address"
-                                            />
-                                            {errors.email && <small className="text-danger">{errors.email}</small>}
-                                        </div>
-                                        <div className="input-block">
-                                            <label className="form-control-label">Password</label>
-                                            <div className="pass-group">
-                                                <input
-                                                    type={passwordType}
-                                                    name="password"
-                                                    required
-                                                    value={Regs.password}
-                                                    onChange={handleInputs}
-                                                    className={`form-control ${errors.password ? "is-invalid" : ""}`}
-                                                    placeholder="Password"
-                                                />
-                                                <span className="toggle-password feather-eye" onClick={togglePassword}>
-                                                    {passwordType === "password" ? (
-                                                        <FeatherIcon icon="eye-off" />
-                                                    ) : (
-                                                        <FeatherIcon icon="eye" />
-                                                    )}
-                                                </span>
-                                            </div>
-                                            {errors.password && (
-                                                <small className="text-danger">{errors.password}</small>
-                                            )}
-                                        </div>
-                                        <div className="forgot">
-                                            <Link className="forgot-link" to="/forgot-password">
-                                                Forgot Password?
-                                            </Link>
-                                        </div>
+                        <form onSubmit={handleForms}>
+                            {/* Email Field */}
+                            <div className="mb-3">
+                                <label className="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    value={Regs.email}
+                                    onChange={handleInputs}
+                                    className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                                    placeholder="Enter your email address"
+                                />
+                                {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                            </div>
 
-                                        <div className="d-grid">
-                                            <button className="login-head button" type="submit" disabled={loading}>
-                                                {loading ? "Submitting..." : "Sign In"}
-                                            </button>
-                                        </div>
-
-                                    </form>
+                            {/* Password Field */}
+                            <div className="mb-3">
+                                <label className="form-label">Password</label>
+                                <div className="input-group">
+                                    <input
+                                        type={passwordType}
+                                        name="password"
+                                        required
+                                        value={Regs.password}
+                                        onChange={handleInputs}
+                                        className={`form-control ${errors.password ? "is-invalid" : ""}`}
+                                        placeholder="Password"
+                                    />
+                                    <button
+                                        type="button"
+                                        className="btn btn-outline-secondary"
+                                        onClick={togglePassword}
+                                        tabIndex={-1}
+                                    >
+                                        {passwordType === "password" ? (
+                                            <FeatherIcon icon="eye-off" />
+                                        ) : (
+                                            <FeatherIcon icon="eye" />
+                                        )}
+                                    </button>
+                                    {errors.password && <div className="invalid-feedback d-block">{errors.password}</div>}
                                 </div>
                             </div>
-                        </div>
-                        {/* /Login */}
+
+                            {/* Forgot Password Link */}
+                            <div className="mb-3 text-end">
+                                <Link className="text-decoration-none" to="/forgot-password">
+                                    Forgot Password?
+                                </Link>
+                            </div>
+
+                            {/* Submit Button */}
+                            <div className="d-grid">
+                                <button className="login-head button cursor-pointer"
+                                    type="submit" disabled={loading}>
+                                    {loading ? "Submitting..." : "Sign In"}
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+
         </>
     );
 };
