@@ -11,9 +11,6 @@ const Support = () => {
   const [selectedUsers, setSelectedUsers] = useState([]);
   const [selectAll, setSelectAll] = useState(false);
 
-  // Fetch User List
-
-
   const ContactList = async () => {
     setLoading(true);
     try {
