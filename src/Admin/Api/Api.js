@@ -1,11 +1,7 @@
 import axios from 'axios';
-
 // The base URL of your backend
 const APP_URL = process.env.REACT_APP_URL ||  'http://localhost:8000/';
 // const APP_URL =  'https://api.stackearn.com';
-
-
-// Function to get the token from local storage
 function getToken() {
   return localStorage.getItem('AdminToken');
 }
