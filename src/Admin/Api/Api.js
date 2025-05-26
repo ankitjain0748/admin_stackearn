@@ -1,7 +1,6 @@
 import axios from 'axios';
-// The base URL of your backend
-const APP_URL = process.env.REACT_APP_URL ||  'http://localhost:8000/';
-// const APP_URL =  'https://api.stackearn.com';
+// const APP_URL = process.env.REACT_APP_URL ||  'http://localhost:8000/';
+const APP_URL =  'https://schoolnode-1.onrender.com/';
 function getToken() {
   return localStorage.getItem('AdminToken');
 }
