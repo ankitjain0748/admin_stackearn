@@ -1,5 +1,5 @@
 import './App.css';
-// import "./css/style.css"
+import "./css/style.css"
 // import "./css/Admin.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Toaster } from "react-hot-toast";
