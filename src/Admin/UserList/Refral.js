@@ -34,7 +34,6 @@ function Refral() {
     }, [id, searchname, searchDate, currentPage]);
 
 
-
     const handlePageChange = (page) => {
         if (page < 1 || page > totalPages) return;
         setCurrentPage(page);
