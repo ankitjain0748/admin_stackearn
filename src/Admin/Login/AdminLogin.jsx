@@ -134,12 +134,9 @@ const Login = () => {
                             <div className="loginbox">
                                 <div className="w-100">
                                     <div className="img-logo">
-                                        <Link to="/home">
+                                        <Link to="/">
                                             <img src={logo} className="img-fluid" alt="Logo" />
                                         </Link>
-                                        <div className="back-home">
-                                            <Link to="/home">Back to Home</Link>
-                                        </div>
                                     </div>
                                     <h1>Sign into Your Account</h1>
                                     <form onSubmit={handleForms}>
